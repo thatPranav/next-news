@@ -1,6 +1,7 @@
 import styles from '../../styles/Feed.module.css';
 import { useRouter } from "next/dist/client/router"
 import {Toolbar} from '../../components/toolbar'
+import Image from 'next/image' 
 
 
 
@@ -15,7 +16,7 @@ export const Feed = ({pageNumber, articles}) => {
                     <div key={index} className={styles.post}>
                         <h1 onClick={() => (window.open(article.url, '_blank').focus())}>{article.title}</h1>
                         <p>{article.description}</p>
-                        {!!article.urlToImage && <img src={article.urlToImage}/>}
+                        {!!article.urlToImage && <Image alt="" src={article.urlToImage}/>}
                     </div>
                 ))}
             </div>

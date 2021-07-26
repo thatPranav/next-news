@@ -12,7 +12,7 @@ export const EOM = ({employee}) => {
                 <div className={styles.employeeOfTheMonth}>
                     <h3>{employee.name}</h3>
                     <h6>{employee.position}</h6>
-                    <img src={employee.image} />
+                    {/* <img src={employee.image} /> */}
                     <p>{employee.description}</p>
                 </div>
             </div>
